@@ -18,13 +18,26 @@ async function createWidget() {
   listwidget.backgroundColor = new Color("#000000");
 
   // Add widget heading
-  let heading = listwidget.addText("🚀Next🚀");
+  let heading = listwidget.addText("페이퍼 길드 공지사항");
   heading.centerAlignText();
-  heading.font = Font.lightSystemFont(25);
+  heading.font = Font.lightSystemFont(20);
   heading.textColor = new Color("#ffffff");
   
   // Spacer between heading and launch date
-  listwidget.addSpacer(15);
+  listwidget.addSpacer(10);
+  
+  let contents = listwidget.addText("차우성 결혼식: 2021.10.3");
+  constents.leftAlignText()
+  contents.font = Font.semiboldSystemFont(15);
+  dateText.textColor = new Color("#ffffff");
+
+
+  let hompage = listwidget.addText("페이퍼 홈피가기")
+  hompage.leftAlignText()
+  hompage.url = "https://www.notion.so/17aa4f93eb77488ebf8db164112d2c33"
+  contents.font = Font.semiboldSystemFont(10);
+  dateText.textColor = new Color("#ffffff");
+
   
   // Fetch next launch date
   let launch = await getNextLaunch();
