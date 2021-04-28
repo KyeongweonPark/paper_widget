@@ -29,16 +29,16 @@ async function createWidget() {
   let contents = listwidget.addText("차우성 결혼식: 2021.10.3");
   constents.leftAlignText()
   contents.font = Font.semiboldSystemFont(15);
-  dateText.textColor = new Color("#ffffff");
+  contents.textColor = new Color("#ffffff");
 
 
-  let hompage = listwidget.addText("페이퍼 홈피가기")
-  hompage.leftAlignText()
-  hompage.url = "https://www.notion.so/17aa4f93eb77488ebf8db164112d2c33"
-  contents.font = Font.semiboldSystemFont(10);
-  dateText.textColor = new Color("#ffffff");
+  let hompage = listwidget.addText("페이퍼 홈피가기");
+  hompage.leftAlignText();
+  hompage.url = "https://www.notion.so/17aa4f93eb77488ebf8db164112d2c33";
+  hompage.font = Font.semiboldSystemFont(10);
+  homepage.textColor = new Color("#ffffff");
 
-  
+
   // Fetch next launch date
   let launch = await getNextLaunch();
   let launchDateTime = getLaunchDateTime(launch);
